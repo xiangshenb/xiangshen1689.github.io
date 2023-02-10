@@ -1370,3 +1370,10 @@ pre .javascript .function {
   margin-right: 5px;
   display: inline-block;
 }
+
+
+
+/* 隐藏vpower*/
+.vpower{
+  display: none;
+}
