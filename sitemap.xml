@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://xiangshenb.github.io/2023/02/09/aaa/</loc>
+    
+    <lastmod>2023-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiangshenb.github.io/2022/11/21/test/</loc>
+    
+    <lastmod>2023-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiangshenb.github.io/about/index.html</loc>
+    
+    <lastmod>2023-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiangshenb.github.io/tags/index.html</loc>
+    
+    <lastmod>2023-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiangshenb.github.io/categories/index.html</loc>
+    
+    <lastmod>2023-02-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiangshenb.github.io/page1/index.html</loc>
+    
+    <lastmod>2023-02-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xiangshenb.github.io/2022/11/21/hello-world/</loc>
+    
+    <lastmod>2022-11-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  <url>
+    <loc>https://xiangshenb.github.io/</loc>
+    <lastmod>2024-02-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>https://xiangshenb.github.io/tags/obs-studio/</loc>
+    <lastmod>2024-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>https://xiangshenb.github.io/categories/obs-studio/</loc>
+    <lastmod>2024-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+</urlset>
