@@ -188,6 +188,118 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xiangshenb.github.io/2024/02/02/hyper-v-cpu%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A7%A3%E8%AF%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术分享">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/02/02/hyper-v-cpu%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A7%A3%E8%AF%BB/" class="post-title-link" itemprop="url">hyper-v cpu参数配置解读</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2024-02-02 16:07:48 / 修改时间：16:10:01" itemprop="dateCreated datePublished" datetime="2024-02-02T16:07:48+08:00">2024-02-02</time>
+            </span>
+
+          
+            <span id="/2024/02/02/hyper-v-cpu%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A7%A3%E8%AF%BB/" class="post-meta-item leancloud_visitors" data-flag-title="hyper-v cpu参数配置解读" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2024/02/02/hyper-v-cpu%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A7%A3%E8%AF%BB/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2024/02/02/hyper-v-cpu%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%A7%A3%E8%AF%BB/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>hyper-v 虚拟机 cpu 处理器的 配置选项介绍下</strong></p>
+<p>Hyper-V 是一种虚拟化技术，它允许在 Windows 操作系统上创建和管理虚拟机。在 Hyper-V 虚拟机中，可以配置多种 CPU 处理器选项来满足不同的需求。以下是一些常见的 Hyper-V 虚拟机 CPU 处理器配置选项的介绍：</p>
+<pre><code>虚拟处理器数量（Number of Virtual Processors）：这个选项允许你指定虚拟机所使用的虚拟处理器的数量。增加虚拟处理器的数量可以提高虚拟机的性能，但需要注意与物理处理器的核心数量和主机系统资源的限制相匹配。
+
+虚拟处理器的分配类型（Virtual Processor Allocation Type）：这个选项确定虚拟处理器如何与物理处理器进行映射。有两种常见的分配类型：
+    静态分配（Static Allocation）：虚拟处理器与物理处理器的映射是固定的，分配给虚拟机的资源是独占的。
+    动态分配（Dynamic Allocation）：虚拟处理器可以根据需要动态地与物理处理器进行映射，允许多个虚拟机共享物理处理器的资源。
+
+虚拟处理器的优先级（Virtual Processor Priority）：该选项允许你为虚拟机中的虚拟处理器设置优先级。优先级越高的虚拟处理器在竞争物理处理器资源时更有可能获得更多的计算时间。
+
+虚拟处理器的启用状态（Virtual Processor Enabled State）：这个选项允许你启用或禁用虚拟处理器。禁用虚拟处理器可以将其暂时从虚拟机中移除，以便在需要时进行性能调整或管理操作。
+
+CPU 指令集扩展（CPU Instruction Set Extensions）：这个选项允许你为虚拟机启用或禁用特定的 CPU 指令集扩展。通过启用适当的指令集扩展，可以提高虚拟机在执行特定任务时的性能。
+</code></pre>
+<p>这些配置选项可以在 Hyper-V 管理器中的虚拟机设置中找到。请注意，具体的配置选项可能会因 Hyper-V 的版本和操作系统的不同而有所差异。建议在使用这些选项之前查阅相关文档或参考 Hyper-V 的官方文档以获取更详细和准确的信息。</p>
+<p><strong>虚拟机保留（百分比） 这个选项什么意思？</strong></p>
+<p>虚拟机保留（百分比）是 Hyper-V 虚拟机的一个配置选项，用于指定虚拟机在物理处理器资源竞争时所保留的最小资源百分比。</p>
+<p>当多个虚拟机在同一物理处理器上运行时，它们会竞争物理处理器资源。通过设置虚拟机保留百分比，可以确保某个虚拟机在资源竞争时获得最低保证的处理器资源。</p>
+<p>虚拟机保留百分比的值可以在 0 到 100 之间进行配置。默认情况下，此值为 0，表示虚拟机不保留任何处理器资源。如果将虚拟机保留百分比设置为 20%，则在资源竞争时，Hyper-V 会确保该虚拟机至少获得物理处理器资源的 20%。</p>
+<p>设置虚拟机保留百分比可以确保关键虚拟机在资源竞争时获得足够的处理器资源，从而提高其性能和响应能力。然而，需要注意的是，虚拟机保留百分比设置得过高可能会导致其他虚拟机的性能下降，因为它们无法获得足够的处理器资源。</p>
+<p>在 Hyper-V 管理器中，可以通过编辑虚拟机的设置来配置虚拟机保留百分比。具体的配置方法可能会因 Hyper-V 的版本和操作系统的不同而有所差异。建议在使用此选项之前查阅相关文档或参考 Hyper-V 的官方文档以获取更详细和准确的信息。</p>
+<p><strong>虚拟机限制（百分比）具体指的什么意思？</strong></p>
+<p>虚拟机限制（百分比）是 Hyper-V 虚拟机的一个配置选项，用于指定虚拟机在物理处理器资源竞争时所允许的最大资源使用百分比。</p>
+<p>当多个虚拟机在同一物理处理器上运行时，它们会竞争物理处理器资源。通过设置虚拟机限制百分比，可以限制某个虚拟机在资源竞争时所能使用的最大处理器资源百分比。</p>
+<p>虚拟机限制百分比的值可以在 0 到 100 之间进行配置。默认情况下，此值为 100%，表示虚拟机可以使用物理处理器的全部资源。如果将虚拟机限制百分比设置为 50%，则在资源竞争时，Hyper-V 会限制该虚拟机最多使用物理处理器资源的 50%。</p>
+<p>设置虚拟机限制百分比可以确保某个虚拟机不会过度占用物理处理器资源，从而保证其他虚拟机的性能不受影响。这对于在共享资源环境中平衡虚拟机的性能非常重要。</p>
+<p>在 Hyper-V 管理器中，可以通过编辑虚拟机的设置来配置虚拟机限制百分比。具体的配置方法可能会因 Hyper-V 的版本和操作系统的不同而有所差异。建议在使用此选项之前查阅相关文档或参考 Hyper-V 的官方文档以获取更详细和准确的信息。</p>
+<p><strong>如果2个虚拟机限制都是设置为 80% 会怎么样？</strong></p>
+<p>如果两个虚拟机的限制都设置为 80%，意味着每个虚拟机在资源竞争时最多可以使用物理处理器资源的 80%。</p>
+<p>当两个虚拟机同时需要处理器资源时，Hyper-V 会根据其限制百分比来分配资源。在这种情况下，每个虚拟机最多可以使用物理处理器资源的 80%。如果物理处理器的总资源足够，两个虚拟机都可以获得相对均衡的处理器资源，从而提供良好的性能。</p>
+<p>然而，如果物理处理器的资源不足以满足两个虚拟机的需求，它们可能会在处理器资源上发生竞争。在这种情况下，Hyper-V 会尝试按照它们的限制百分比分配处理器资源。但是，由于资源有限，两个虚拟机可能无法同时获得它们所需的全部资源，从而导致性能下降。</p>
+<p>因此，设置虚拟机的限制百分比需要综合考虑实际需求和可用资源。如果两个虚拟机对性能要求较高，可以考虑增加它们的限制百分比，以获得更多的处理器资源。但是需要注意，过高的限制百分比可能会导致其他虚拟机的性能下降，因为它们无法获得足够的处理器资源。</p>
+<p>在实际配置虚拟机的限制百分比时，建议根据虚拟机的工作负载和性能需求进行测试和调整，以获得最佳的性能和资源分配。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://xiangshenb.github.io/2023/02/09/aaa/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -536,7 +648,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
